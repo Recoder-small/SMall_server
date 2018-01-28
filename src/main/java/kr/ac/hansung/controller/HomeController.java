@@ -37,14 +37,4 @@ public class HomeController {
 		return "home";
 	}
 	
-	/*@RequestMapping("/home")
-	public ModelAndView home() {
-		ModelAndView mav = new ModelAndView("home");
-		
-		Map result = new HashMap();
-		result.put("home", result);
-		
-		mav.addObject("home", result);
-		return mav;
-	}*/
 }

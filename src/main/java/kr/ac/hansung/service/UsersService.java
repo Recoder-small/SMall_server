@@ -17,4 +17,9 @@ public class UsersService {
 	public List<Users> getCurrent() {
 		return usersDao.getUsers();
 	}
+	
+	/* id로 name, birth, gender 찾기 */
+	public List<Users> getUserInfo(String id) {
+		return usersDao.getUserInfo(id);
+	}
 }

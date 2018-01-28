@@ -44,4 +44,25 @@ public class UsersDAO {
 			
 		});
 	}
+	
+	public List<Users> getUserInfo(String id) {
+		String sqlStatement = "select name, birth, gender from users where userid=id";
+		
+		return jdbcTemplate.query(sqlStatement,  new RowMapper<Users>() {
+
+			@Override
+			public Users mapRow(ResultSet rs, int rowNum) throws SQLException {
+				
+				Users users = new Users();
+				
+				users.setName(rs.getString("name"));
+				users.setBirth(rs.getInt("birth"));
+				users.setGender("gender");
+				
+				return users;
+			}
+			
+			
+		});
+	}
 }

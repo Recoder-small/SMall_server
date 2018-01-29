@@ -17,52 +17,87 @@ import kr.ac.hansung.model.Users;
 public class UsersDAO {
 
 	private JdbcTemplate jdbcTemplate;
-	
+
 	@Autowired
 	public void setDataSource(DataSource dataSource) {
 		jdbcTemplate = new JdbcTemplate(dataSource);
 	}
-	
+
+	public boolean insert(Users user) {
+
+		String userid = user.getUserid();
+		String password = user.getPassword();
+		String name = user.getName();
+		int birth = user.getBirth();
+		String gender = user.getGender();
+
+		String sqlStatement = "insert into users (userid, password, name, birth, gender) values(?,?,?,?,?)";
+
+		return (jdbcTemplate.update(sqlStatement,
+				new Object[] { userid, password, name, birth, gender}) == 1);
+	}
+
 	public List<Users> getUsers() {
 		String sqlStatement = "select * from users";
-		
-		return jdbcTemplate.query(sqlStatement,  new RowMapper<Users>() {
+
+		return jdbcTemplate.query(sqlStatement, new RowMapper<Users>() {
 
 			@Override
 			public Users mapRow(ResultSet rs, int rowNum) throws SQLException {
-				
+
 				Users users = new Users();
-				
+
 				users.setUserid(rs.getString("userid"));
 				users.setPassword(rs.getString("password"));
 				users.setName(rs.getString("name"));
 				users.setBirth(rs.getInt("birth"));
 				users.setGender(rs.getString("gender"));
-				
+
 				return users;
 			}
-			
+
 		});
 	}
-	
-	public List<Users> getUserInfo(String id) {
-		String sqlStatement = "select name, birth, gender from users where userid=id";
-		
-		return jdbcTemplate.query(sqlStatement,  new RowMapper<Users>() {
+
+	// 로그인 중복확인
+	public List<Users> getIds() {
+		String sqlStatement = "select userid from users";
+
+		return jdbcTemplate.query(sqlStatement, new RowMapper<Users>() {
 
 			@Override
 			public Users mapRow(ResultSet rs, int rowNum) throws SQLException {
-				
+
 				Users users = new Users();
-				
-				users.setName(rs.getString("name"));
-				users.setBirth(rs.getInt("birth"));
-				users.setGender("gender");
-				
+
+				users.setUserid(rs.getString("userid"));
+
 				return users;
 			}
-			
-			
+
+		});
+	}
+
+	// 로그인
+	public Users getUserInfo(String id, String password) {
+		String sqlStatement = "select * from users where userid=? and password=?";
+		return jdbcTemplate.queryForObject(sqlStatement, new Object[] { id, password }, new RowMapper<Users>() {
+
+			@Override
+			public Users mapRow(ResultSet rs, int rowNum) throws SQLException {
+
+				Users user = new Users();
+
+				user.setUserid(rs.getString("userid"));
+				user.setPassword(rs.getString("password"));
+				user.setName(rs.getString("name"));
+				user.setBirth(rs.getInt("birth"));
+				user.setGender(rs.getString("gender"));
+
+				return user;
+
+			}
+
 		});
 	}
 }

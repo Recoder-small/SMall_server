@@ -18,8 +18,17 @@ public class UsersService {
 		return usersDao.getUsers();
 	}
 	
-	/* id로 name, birth, gender 찾기 */
-	public List<Users> getUserInfo(String id) {
-		return usersDao.getUserInfo(id);
+	public boolean insert(Users user) {
+		return usersDao.insert(user);
+	}
+	
+	/* id로 password, name, birth, gender 찾기 */
+	public Users getUserInfo(String id, String password) {
+		return usersDao.getUserInfo(id, password);
+	}
+	
+	/* 아이디 중복 확인 */
+	public List<Users> getIds() {
+		return usersDao.getIds();
 	}
 }

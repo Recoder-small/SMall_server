@@ -30,7 +30,7 @@ public class AndroidRequestBeaconController {
 		String major = request.getParameter("major");
 		String minor = request.getParameter("minor");
 
-		System.out.println("id = " + id + ", " + "major = " + major);
+		System.out.println("id = " + id + ", " + "major = " + major + " minor = " + minor);
 
 		try {
 			BeaconInfo beaconInfo = beaconService.getBeaconInfo(id, major, minor);

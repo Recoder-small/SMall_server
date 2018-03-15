@@ -25,7 +25,7 @@ public class BeaconDAO {
 	
 	public boolean insert(BeaconInfo beaconInfo) {
 
-		String id = beaconInfo.getId();
+		//String id = beaconInfo.getId();
 		String major = beaconInfo.getMajor();
 		String minor = beaconInfo.getMinor();
 		String location = beaconInfo.getLocation();
@@ -33,19 +33,19 @@ public class BeaconDAO {
 		String sqlStatement = "insert into beaconInfo (id, major, minor, location) values(?,?,?,?)";
 
 		return (jdbcTemplate.update(sqlStatement,
-				new Object[] { id, major, minor, location}) == 1);
+				new Object[] { major, minor, location}) == 1);
 	}
 	
-	public BeaconInfo getBeaconInfo(String id, String major, String minor) {
-		String sqlStatement = "select * from beaconInfo where id=? and major=? and minor=?";
-		return jdbcTemplate.queryForObject(sqlStatement, new Object[] { id, major, minor }, new RowMapper<BeaconInfo>() {
+	public BeaconInfo getBeaconInfo(String major, String minor) {
+		String sqlStatement = "select * from beaconInfo where and major=? and minor=?";
+		return jdbcTemplate.queryForObject(sqlStatement, new Object[] {major, minor }, new RowMapper<BeaconInfo>() {
 
 			@Override
 			public BeaconInfo mapRow(ResultSet rs, int rowNum) throws SQLException {
 
 				BeaconInfo beaconInfo = new BeaconInfo();
 
-				beaconInfo.setId(rs.getString("id"));
+				//beaconInfo.setId(rs.getString("id"));
 				beaconInfo.setMajor(rs.getString("major"));
 				beaconInfo.setMinor(rs.getString("minor"));
 				beaconInfo.setLocation(rs.getString("location"));

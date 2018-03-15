@@ -17,7 +17,7 @@ public class BeaconService {
 		return beaconDao.insert(beaconInfo);
 	}
 
-	public BeaconInfo getBeaconInfo(String id, String major, String minor) {
-		return beaconDao.getBeaconInfo(id, major, minor);
+	public BeaconInfo getBeaconInfo(String major, String minor) {
+		return beaconDao.getBeaconInfo(major, minor);
 	}
 }

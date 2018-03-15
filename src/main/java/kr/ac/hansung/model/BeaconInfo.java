@@ -11,8 +11,9 @@ import lombok.ToString;
 @ToString
 public class BeaconInfo {
 
-	private String id;
+	//private String id;
 	private String major;
 	private String minor;
 	private String location;
+	private String distance;
 }

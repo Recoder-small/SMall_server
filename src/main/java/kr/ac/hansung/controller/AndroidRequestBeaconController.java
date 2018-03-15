@@ -1,5 +1,6 @@
 package kr.ac.hansung.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,18 +23,29 @@ public class AndroidRequestBeaconController {
 	@Autowired
 	private BeaconService beaconService;
 	
+	private ArrayList<BeaconInfo> beacons = new ArrayList<BeaconInfo>();
+	
 	@RequestMapping("/Android_beacon_location")
 	@ResponseBody
 	public Map<String, Object> Android_beacon(HttpServletRequest request) {
 		
-		String id = request.getParameter("id");
-		String major = request.getParameter("major");
-		String minor = request.getParameter("minor");
+		String array[] = request.getParameter("beaconinfo1").split("/");
+		String major = array[0];
+		String minor = array[1];
+		
+		
+		//String id = request.getParameter("id");
+		//String major = request.getParameter("major");
+		//String minor = request.getParameter("minor");
+		
+		//BeaconInfo beaconInfo1 = request.getParameter("beaconInfo1");
+		//beacons.add(beaconInfo1);
 
-		System.out.println("id = " + id + ", " + "major = " + major + " minor = " + minor);
+		System.out.println("major = " + major + " minor = " + minor);
 
-		try {
-			BeaconInfo beaconInfo = beaconService.getBeaconInfo(id, major, minor);
+		/*try {
+			// 비콘3개위치로 현재위치 잡기
+			BeaconInfo beaconInfo = beaconService.getBeaconInfo(major, minor);
 
 			Map<String, Object> result = new HashMap<String, Object>();
 			result.put("location", beaconInfo.getLocation());
@@ -45,7 +57,11 @@ public class AndroidRequestBeaconController {
 			failresult.put("fail", "fail");
 			System.out.println("fail");
 			return failresult;
-		}
+		}*/
+		Map<String, Object> result = new HashMap<String, Object>();
+		result.put("location", "hihi");
+
+		return result;
 		
 	}
 }

@@ -44,7 +44,7 @@ public class FileClient {
 
                 //파일을 읽는 경우라면,BufferedReader보다 BufferedInputStream이 더 적절하다.
 
-                FileOutputStream fos = new FileOutputStream("picture/testfile2.png");
+                FileOutputStream fos = new FileOutputStream("picture/testfile.png");
 
                 //파일을 열어서 어떤식으로 저장할지 알려준다. FileOutputStream을 쓰면 들어오는 파일과 일치하게 파일을 작성해줄 수 있는 장점이 있다.
 
@@ -70,7 +70,7 @@ public class FileClient {
 
     public static void main(String[] args) {
 
-        FileClient fc = new FileClient("localhost", 5000);
+        //FileClient fc = new FileClient("localhost", 5000);
 
     }
 

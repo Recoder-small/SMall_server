@@ -32,15 +32,18 @@ public class AndroidRequestRegisterAndLoginController {
 		String name = request.getParameter("name");
 		String birth_text = request.getParameter("birth");
 		String gender = request.getParameter("gender");
+		String stamp = request.getParameter("stamp");
 		
 		int birth = Integer.parseInt(birth_text);
-		
+		int stampCnt = Integer.parseInt(stamp);
+
 		Users user = new Users();
 		user.setUserid(userid);
 		user.setPassword(password);
 		user.setName(name);
 		user.setBirth(birth);
 		user.setGender(gender);
+		user.setStamp(stampCnt);
 		
 		boolean check = usersService.insert(user);
 		Map<String, String> result = new HashMap<String, String>();
@@ -102,6 +105,7 @@ public class AndroidRequestRegisterAndLoginController {
 			result.put("name", user.getName());
 			result.put("birth", user.getBirth());
 			result.put("gender", user.getGender());
+			result.put("stamp", user.getStamp());
 
 			return result;
 

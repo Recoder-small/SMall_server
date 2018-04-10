@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+  <definition name="base" template="/WEB-INF/templates/layout.jsp">
+    <put-attribute name="title" value="SMall HomePage" />
+    <put-attribute name="menu" value="/WEB-INF/templates/menu.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/templates/footer.jsp" />
+  </definition>
+  
+    <definition name="home" extends="base">
+    <put-attribute name="title" value="My eStore Homepage" />
+    <put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+  </definition>
+  
+   <definition name="shoppingnews" extends="base">
+    <put-attribute name="title" value="Shopping News page" />
+    <put-attribute name="body" value="/WEB-INF/views/shoppingnews.jsp" />
+  </definition>
+  
+   <definition name="couponPage" extends="base">
+    <put-attribute name="title" value="Coupon page" />
+    <put-attribute name="body" value="/WEB-INF/views/couponPage.jsp" />
+  </definition>
+  
+    <definition name="floorInfo" extends="base">
+    <put-attribute name="title" value="Floor Info page" />
+    <put-attribute name="body" value="/WEB-INF/views/floorInfo.jsp" />
+  </definition>
+  
+   <definition name="recommendationService" extends="base">
+    <put-attribute name="title" value="Recommend page" />
+    <put-attribute name="body" value="/WEB-INF/views/recommendationService.jsp" />
+  </definition>
+
+  
+  
+ 
+  
+</tiles-definitions>

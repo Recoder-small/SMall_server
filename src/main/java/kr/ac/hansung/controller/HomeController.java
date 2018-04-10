@@ -37,4 +37,29 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping("/shoppingnews")
+	public String shoppingnews(Model model) {
+		
+		return "shoppingnews";
+	}
+	
+	@RequestMapping("/couponPage")
+	public String couponPage(Model model) {
+		
+		return "couponPage";
+	}
+	
+	@RequestMapping("/floorInfo")
+	public String floorInfo(Model model) {
+		
+		return "floorInfo";
+	}
+	
+	@RequestMapping("/recommendationService")
+	public String recommendPage(Model model) {
+		
+		return "recommendationService";
+	}
+
+	
 }

@@ -30,11 +30,12 @@ public class UsersDAO {
 		String name = user.getName();
 		int birth = user.getBirth();
 		String gender = user.getGender();
+		int stamp = user.getStamp();
 
-		String sqlStatement = "insert into users (userid, password, name, birth, gender) values(?,?,?,?,?)";
+		String sqlStatement = "insert into users (userid, password, name, birth, gender, stamp) values(?,?,?,?,?,?)";
 
 		return (jdbcTemplate.update(sqlStatement,
-				new Object[] { userid, password, name, birth, gender}) == 1);
+				new Object[] { userid, password, name, birth, gender, stamp}) == 1);
 	}
 
 	public List<Users> getUsers() {
@@ -52,6 +53,7 @@ public class UsersDAO {
 				users.setName(rs.getString("name"));
 				users.setBirth(rs.getInt("birth"));
 				users.setGender(rs.getString("gender"));
+				users.setStamp(rs.getInt("stamp"));
 
 				return users;
 			}
@@ -93,11 +95,23 @@ public class UsersDAO {
 				user.setName(rs.getString("name"));
 				user.setBirth(rs.getInt("birth"));
 				user.setGender(rs.getString("gender"));
+				user.setStamp(rs.getInt("stamp"));
 
 				return user;
 
 			}
 
 		});
+	}
+	
+	public boolean saveStamp(String id, int stampCnt) {
+		
+		String sqlStatement = "update users set stamp = ? where userid=?";
+		
+		System.out.println("stampCnt = " + stampCnt);
+		
+		return (jdbcTemplate.update(sqlStatement,
+				new Object[] {stampCnt, id }) == 1);
+		
 	}
 }

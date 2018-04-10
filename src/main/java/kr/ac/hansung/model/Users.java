@@ -16,4 +16,5 @@ public class Users {
 	private String name;
 	private int birth;
 	private String gender;
+	private int stamp;
 }

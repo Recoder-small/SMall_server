@@ -13,11 +13,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import kr.ac.hansung.jupyter.SendToPython;
 import kr.ac.hansung.model.Users;
 import kr.ac.hansung.service.UsersService;
 
 @Controller
 public class HomeController {
+	
+	SendToPython cm;
+	String receiveData;
 	
 	@Autowired
 	private UsersService usersService;
@@ -35,6 +39,13 @@ public class HomeController {
 		System.out.println(users.get(0).toString());
 		
 		return "home";
+	}
+	
+	@RequestMapping("/main")
+	public void main(Model model) {
+		cm = SendToPython.getInstance();
+		receiveData = cm.ClientRun("6.5, 2.6, 7.5, 4.3, 6.7");
+		System.out.println("main : " + receiveData);
 	}
 	
 	@RequestMapping("/shoppingnews")
@@ -57,6 +68,21 @@ public class HomeController {
 	
 	@RequestMapping("/recommendationService")
 	public String recommendPage(Model model) {
+		
+		String category = "";
+		
+		switch(receiveData) {
+		case "0": category = "shoes"; break;
+		case "1": category = "cosmetics"; break;
+		case "2": category = "cosmetics"; break;
+		case "3": category = "shoes"; break;
+		case "4": category = "shoes"; break;
+		case "5": category = "shoes"; break;
+		}
+		
+
+		model.addAttribute("category", category);
+		
 		
 		return "recommendationService";
 	}

@@ -15,16 +15,17 @@ public class SendToPython {
 	private static String HOST = "127.0.0.1";
 	private static int PORT = 10000;
 	private static int BUFSIZE = 1024;
+	private String receiveData;
 
 	private SendToPython() {
-
+		System.out.println("//////////");
 	}
 	
 	public static synchronized SendToPython getInstance() {
 		return sendToPython;
 	}
 
-	public void ClientRun(String data) {
+	public String ClientRun(String data) {
 		Socket socket = null;
 		OutputStream os = null;
 		OutputStreamWriter osw = null;
@@ -48,7 +49,7 @@ public class SendToPython {
 			bw.newLine();
 			bw.flush();
 
-			String receiveData = "";
+			receiveData = "";
 			receiveData = br.readLine();
 			System.out.println("서버로부터 받은 데이터 : " + receiveData);
 		} catch (Exception e) {
@@ -65,12 +66,15 @@ public class SendToPython {
 				e.printStackTrace();
 			}
 		}
+		
+		return receiveData;
 	}
 
-	public static void main(String[] args) throws IOException {
+	/*public static void main(String[] args) throws IOException {
 
 		SendToPython cm = SendToPython.getInstance();
-		cm.ClientRun("9.8, 2.3, 7.5, 8.2, 6.7");
-	}
+		String receiveData = cm.ClientRun("9.8, 2.3, 7.5, 8.2, 6.7");
+		System.out.println(receiveData);
+	}*/
 
 }

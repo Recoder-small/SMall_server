@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <body id="page-top">
 	<div class="container-wrapper">
@@ -17,7 +17,7 @@
 				<div class="col-md-6 col-0-gutter">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="resources/images/demo/portfolio-1.jpg" alt="img02"
+							<img src="resources/images/${category}/1.jpg" alt="img02"
 								class="img-responsive" />
 							<figcaption>
 								<h2>Dean & Letter</h2>
@@ -33,7 +33,7 @@
 				<div class="col-md-6 col-0-gutter">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="resources/images/demo/portfolio-2.jpg" alt="img02"
+							<img src="resources/images/${category}/2.jpg" alt="img02"
 								class="img-responsive" />
 							<figcaption>
 								<h2>Startup Framework</h2>
@@ -51,7 +51,7 @@
 				<div class="col-md-6 col-0-gutter">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="resources/images/demo/portfolio-3.jpg" alt="img02"
+							<img src="resources/images/${category}/3.jpg" alt="img02"
 								class="img-responsive" />
 							<figcaption>
 								<h2>Lamp & Velvet</h2>
@@ -67,7 +67,7 @@
 				<div class="col-md-6 col-0-gutter">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="resources/images/demo/portfolio-4.jpg" alt="img02"
+							<img src="resources/images/${category}/4.jpg" alt="img02"
 								class="img-responsive" />
 							<figcaption>
 								<h2>Smart Name</h2>
@@ -85,7 +85,7 @@
 				<div class="col-md-6 col-0-gutter">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="resources/images/demo/portfolio-5.jpg" alt="img02"
+							<img src="resources/images/${category}/5.jpg" alt="img02"
 								class="img-responsive" />
 							<figcaption>
 								<h2>Fast People</h2>
@@ -101,7 +101,7 @@
 				<div class="col-md-6 col-0-gutter">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="resources/images/demo/portfolio-6.jpg" alt="img02"
+							<img src="resources/images/${category}/6.jpg" alt="img02"
 								class="img-responsive" />
 							<figcaption>
 								<h2>Kites & Stars</h2>

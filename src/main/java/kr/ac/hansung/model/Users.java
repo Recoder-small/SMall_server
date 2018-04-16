@@ -17,4 +17,10 @@ public class Users {
 	private int birth;
 	private String gender;
 	private int stamp;
+
+	int fashion;
+	int beauty;
+	int general;
+	int sports;
+	int health;
 }

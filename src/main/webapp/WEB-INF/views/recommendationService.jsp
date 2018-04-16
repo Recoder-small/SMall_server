@@ -15,10 +15,17 @@
 			<div class="row row-0-gutter">
 				<!-- start portfolio item -->
 				<div class="col-md-6 col-0-gutter">
+					<c:if test="${!empty user }">
+						<div>
+							<h3>${user.name }님을위한추천상품입니다.</h3>
+						</div>
+					</c:if>
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="resources/images/${category}/1.jpg" alt="img02"
-								class="img-responsive" />
+							<c:if test="${!empty category }">
+								<img src="/resources/images/${category}/1.jpg" alt="img02"
+									class="img-responsive" />
+							</c:if>
 							<figcaption>
 								<h2>Dean & Letter</h2>
 								<p>Branding, Design</p>
@@ -33,7 +40,7 @@
 				<div class="col-md-6 col-0-gutter">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="resources/images/${category}/2.jpg" alt="img02"
+							<img src="/resources/images/${category}/2.jpg" alt="img02"
 								class="img-responsive" />
 							<figcaption>
 								<h2>Startup Framework</h2>
@@ -51,7 +58,7 @@
 				<div class="col-md-6 col-0-gutter">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="resources/images/${category}/3.jpg" alt="img02"
+							<img src="/resources/images/${category}/3.jpg" alt="img02"
 								class="img-responsive" />
 							<figcaption>
 								<h2>Lamp & Velvet</h2>
@@ -67,7 +74,7 @@
 				<div class="col-md-6 col-0-gutter">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="resources/images/${category}/4.jpg" alt="img02"
+							<img src="/resources/images/${category}/4.jpg" alt="img02"
 								class="img-responsive" />
 							<figcaption>
 								<h2>Smart Name</h2>
@@ -85,7 +92,7 @@
 				<div class="col-md-6 col-0-gutter">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="resources/images/${category}/5.jpg" alt="img02"
+							<img src="/resources/images/${category}/5.jpg" alt="img02"
 								class="img-responsive" />
 							<figcaption>
 								<h2>Fast People</h2>
@@ -101,7 +108,7 @@
 				<div class="col-md-6 col-0-gutter">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="resources/images/${category}/6.jpg" alt="img02"
+							<img src="/resources/images/${category}/6.jpg" alt="img02"
 								class="img-responsive" />
 							<figcaption>
 								<h2>Kites & Stars</h2>

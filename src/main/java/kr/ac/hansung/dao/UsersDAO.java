@@ -31,11 +31,17 @@ public class UsersDAO {
 		int birth = user.getBirth();
 		String gender = user.getGender();
 		int stamp = user.getStamp();
+		
+		int fashion = user.getFashion();
+		int beauty = user.getBeauty();
+		int general = user.getGeneral();
+		int sports = user.getSports();
+		int health = user.getHealth();
 
-		String sqlStatement = "insert into users (userid, password, name, birth, gender, stamp) values(?,?,?,?,?,?)";
+		String sqlStatement = "insert into users (userid, password, name, birth, gender, stamp, fashion, beauty, general, sports, health) values(?,?,?,?,?,?,?,?,?,?,?)";
 
 		return (jdbcTemplate.update(sqlStatement,
-				new Object[] { userid, password, name, birth, gender, stamp}) == 1);
+				new Object[] { userid, password, name, birth, gender, stamp, fashion, beauty, general, sports, health}) == 1);
 	}
 
 	public List<Users> getUsers() {
@@ -54,6 +60,11 @@ public class UsersDAO {
 				users.setBirth(rs.getInt("birth"));
 				users.setGender(rs.getString("gender"));
 				users.setStamp(rs.getInt("stamp"));
+				users.setFashion(rs.getInt("fashion"));
+				users.setBeauty(rs.getInt("beauty"));
+				users.setGeneral(rs.getInt("general"));
+				users.setSports(rs.getInt("sports"));
+				users.setHealth(rs.getInt("health"));
 
 				return users;
 			}
@@ -96,6 +107,11 @@ public class UsersDAO {
 				user.setBirth(rs.getInt("birth"));
 				user.setGender(rs.getString("gender"));
 				user.setStamp(rs.getInt("stamp"));
+				user.setFashion(rs.getInt("fashion"));
+				user.setBeauty(rs.getInt("beauty"));
+				user.setGeneral(rs.getInt("general"));
+				user.setSports(rs.getInt("sports"));
+				user.setHealth(rs.getInt("health"));
 
 				return user;
 

@@ -48,6 +48,11 @@ public class HomeController {
 		System.out.println("main : " + receiveData);
 	}
 	
+	@RequestMapping("/Nmain")
+	public void mainN(Model model) {
+		
+	}
+	
 	@RequestMapping("/shoppingnews")
 	public String shoppingnews(Model model) {
 		

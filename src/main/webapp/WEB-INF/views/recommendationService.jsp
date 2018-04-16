@@ -17,15 +17,15 @@
 				<div class="col-md-6 col-0-gutter">
 					<c:if test="${!empty user }">
 						<div>
-							<h3>${user.name }님을위한추천상품입니다.</h3>
+							<h3>
+								<span style="color: #610B38;">${user.name }</span>님을위한추천상품입니다.
+							</h3>
 						</div>
 					</c:if>
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<c:if test="${!empty category }">
-								<img src="/resources/images/${category}/1.jpg" alt="img02"
-									class="img-responsive" />
-							</c:if>
+							<img src="/resources/images/${category}/1.jpg" alt="img02"
+								class="img-responsive" />
 							<figcaption>
 								<h2>Dean & Letter</h2>
 								<p>Branding, Design</p>
@@ -144,7 +144,7 @@
 
 					</div>
 					<div class="modal-body">
-						<img src="resources/images/demo/portfolio-1.jpg" alt="img01"
+						<img src="/resources/images/${category}/1.jpg" alt="img01"
 							class="img-responsive" />
 						<div class="modal-works">
 							<span>Branding</span><span>Web Design</span>
@@ -173,7 +173,7 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						<img src="resources/images/demo/portfolio-2.jpg" alt="img01"
+						<img src="/resources/images/${category}/2.jpg" alt="img01"
 							class="img-responsive" />
 						<div class="modal-works">
 							<span>Branding</span><span>Web Design</span>
@@ -202,7 +202,7 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						<img src="resources/images/demo/portfolio-3.jpg" alt="img01"
+						<img src="/resources/images/${category}/3.jpg" alt="img01"
 							class="img-responsive" />
 						<div class="modal-works">
 							<span>Branding</span><span>Web Design</span>
@@ -231,7 +231,7 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						<img src="resources/images/demo/portfolio-4.jpg" alt="img01"
+						<img src="/resources/images/${category}/4.jpg" alt="img01"
 							class="img-responsive" />
 						<div class="modal-works">
 							<span>Branding</span><span>Web Design</span>
@@ -260,7 +260,7 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						<img src="resources/images/demo/portfolio-5.jpg" alt="img01"
+						<img src="/resources/images/${category}/5.jpg" alt="img01"
 							class="img-responsive" />
 						<div class="modal-works">
 							<span>Branding</span><span>Web Design</span>
@@ -290,7 +290,7 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						<img src="resources/images/demo/portfolio-6.jpg" alt="img01"
+						<img src="/resources/images/${category}/6.jpg" alt="img01"
 							class="img-responsive" />
 						<div class="modal-works">
 							<span>Branding</span><span>Web Design</span>

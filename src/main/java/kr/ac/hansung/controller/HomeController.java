@@ -77,12 +77,11 @@ public class HomeController {
 		String category = "";
 		
 		switch(receiveData) {
-		case "0": category = "shoes"; break;
-		case "1": category = "cosmetics"; break;
-		case "2": category = "cosmetics"; break;
-		case "3": category = "shoes"; break;
-		case "4": category = "shoes"; break;
-		case "5": category = "shoes"; break;
+		case "0": category = "beauty"; break;
+		case "1": category = "fashion"; break;
+		case "2": category = "general"; break;
+		case "3": category = "health"; break;
+		case "4": category = "sports"; break;
 		}
 		
 

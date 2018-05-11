@@ -125,6 +125,7 @@ public class AndroidRequestRegisterAndLoginController {
 
 		try {
 			user = usersService.getUserInfo(userid, password);
+			SendToPython sendToPython = SendToPython.getInstance();
 
 			System.out.println(
 					"name = " + user.getName() + " birth = " + user.getBirth() + " gdneder = " + user.getGender());
@@ -148,6 +149,17 @@ public class AndroidRequestRegisterAndLoginController {
 			result.put("general", general);
 			result.put("sports", sports);
 			result.put("health", health);
+			
+			String favorite = "";
+			
+			switch(sendToPython.getReceiveData()) {
+			case "0": favorite = "beauty"; break;
+			case "1": favorite = "fashion"; break;
+			case "2": favorite = "general"; break;
+			case "3": favorite = "health"; break;
+			case "4": favorite = "sports"; break;
+			}
+			result.put("favorite", favorite);
 
 			System.out.println(
 					"name = " + user.getFashion() + " birth = " + user.getBeauty() + " gdneder = " + user.getGeneral());

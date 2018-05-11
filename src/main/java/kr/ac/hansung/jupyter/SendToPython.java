@@ -17,6 +17,10 @@ public class SendToPython {
 	private static int BUFSIZE = 1024;
 	private String receiveData;
 
+	public String getReceiveData() {
+		return receiveData;
+	}
+
 	private SendToPython() {
 		System.out.println("//////////");
 	}

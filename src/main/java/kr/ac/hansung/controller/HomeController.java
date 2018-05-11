@@ -43,6 +43,7 @@ public class HomeController {
 	
 	@RequestMapping("/main")
 	public void main(Model model) {
+		System.out.println("main0 : " + receiveData);
 		cm = SendToPython.getInstance();
 		receiveData = cm.ClientRun("6.5, 2.6, 7.5, 4.3, 6.7");
 		System.out.println("main : " + receiveData);

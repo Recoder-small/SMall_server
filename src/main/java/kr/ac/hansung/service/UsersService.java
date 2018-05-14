@@ -35,5 +35,9 @@ public class UsersService {
 	public void saveStamp(String id, int stampCnt) {
 		usersDao.saveStamp(id, stampCnt);
 	}
+
+	public Users getUserInfo(String id) {
+		return usersDao.getUserInfo(id);
+	}
 	
 }

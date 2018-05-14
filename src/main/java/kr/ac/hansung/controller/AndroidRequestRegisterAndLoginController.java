@@ -1,15 +1,21 @@
 package kr.ac.hansung.controller;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
+import org.apache.http.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,12 +27,12 @@ import kr.ac.hansung.service.UsersService;
 @Controller
 public class AndroidRequestRegisterAndLoginController {
 
-	SendToPython cm;
+	/*SendToPython cm;
 	String receiveData;
 	// 두개의 함수에서 쓰임
 	String userid;
-	String password;
-	Users user;
+	String password;*/
+	//Users user;
 
 	@Autowired
 	private UsersService usersService;
@@ -113,23 +119,20 @@ public class AndroidRequestRegisterAndLoginController {
 		return result;
 	}
 
-	@RequestMapping("/Android_login")
+	@RequestMapping("/Android_login") //post 함수 쓰기
 	@ResponseBody
 	public Map<String, Object> Android_login(HttpServletRequest request) {
 		System.out.println("안드로이드 연결");
 
-		userid = request.getParameter("userid");
-		password = request.getParameter("password");
+		String userid = request.getParameter("userid");
+		String password = request.getParameter("password");
 
-		System.out.println("userid = " + userid + ", " + "password = " + password);
 
 		try {
-			user = usersService.getUserInfo(userid, password);
+			Users user = usersService.getUserInfo(userid, password);
 			SendToPython sendToPython = SendToPython.getInstance();
 
-			System.out.println(
-					"name = " + user.getName() + " birth = " + user.getBirth() + " gdneder = " + user.getGender());
-
+			
 			Map<String, Object> result = new HashMap<String, Object>();
 			result.put("userid", userid);
 			result.put("password", user.getPassword());
@@ -149,24 +152,32 @@ public class AndroidRequestRegisterAndLoginController {
 			result.put("general", general);
 			result.put("sports", sports);
 			result.put("health", health);
-			
+
 			String favorite = "";
-			
-			switch(sendToPython.getReceiveData()) {
-			case "0": favorite = "beauty"; break;
-			case "1": favorite = "fashion"; break;
-			case "2": favorite = "general"; break;
-			case "3": favorite = "health"; break;
-			case "4": favorite = "sports"; break;
+
+			switch (sendToPython.getReceiveData()) {
+			case "0":
+				favorite = "beauty";
+				break;
+			case "1":
+				favorite = "fashion";
+				break;
+			case "2":
+				favorite = "general";
+				break;
+			case "3":
+				favorite = "health";
+				break;
+			case "4":
+				favorite = "sports";
+				break;
 			}
 			result.put("favorite", favorite);
 
-			System.out.println(
-					"name = " + user.getFashion() + " birth = " + user.getBeauty() + " gdneder = " + user.getGeneral());
-
-			cm = SendToPython.getInstance();
-			receiveData = cm.ClientRun(fashion + ", " + beauty + ", " + general + ", " + sports + ", " + health);
-			System.out.println("login : " + receiveData);
+			
+			/*SendToPython cm = SendToPython.getInstance();
+			String receiveData = cm.ClientRun(fashion + ", " + beauty + ", " + general + ", " + sports + ", " + health);
+			System.out.println("login : " + receiveData);*/
 
 			return result;
 
@@ -178,8 +189,23 @@ public class AndroidRequestRegisterAndLoginController {
 		}
 	}
 
-	@RequestMapping("/Android_login/recommendationService")
-	public String recommendPage(Model model) {
+	@RequestMapping("/Android_login/recommendationService/{id}") ///Android_login/recommendationService/{userId}로 해보기
+	public String recommendPage(Model model, @PathVariable String id ) {
+		
+		Users user = usersService.getUserInfo(id);
+		
+		SendToPython sendToPython = SendToPython.getInstance();
+		
+		int fashion = user.getFashion();
+		int beauty = user.getBeauty();
+		int general = user.getGeneral();
+		int sports = user.getSports();
+		int health = user.getHealth();
+		
+		SendToPython cm = SendToPython.getInstance();
+		String receiveData = cm.ClientRun(fashion + ", " + beauty + ", " + general + ", " + sports + ", " + health);
+		System.out.println("login : " + receiveData);
+				
 
 		String category = "";
 
@@ -205,7 +231,7 @@ public class AndroidRequestRegisterAndLoginController {
 		System.out.println("user = " + user);
 		System.out.println("category = " + category);
 		model.addAttribute("category", category);
-
+		
 		return "recommendationService";
 	}
 }

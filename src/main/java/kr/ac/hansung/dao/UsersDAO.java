@@ -31,7 +31,7 @@ public class UsersDAO {
 		int birth = user.getBirth();
 		String gender = user.getGender();
 		int stamp = user.getStamp();
-		
+
 		int fashion = user.getFashion();
 		int beauty = user.getBeauty();
 		int general = user.getGeneral();
@@ -40,8 +40,8 @@ public class UsersDAO {
 
 		String sqlStatement = "insert into users (userid, password, name, birth, gender, stamp, fashion, beauty, general, sports, health) values(?,?,?,?,?,?,?,?,?,?,?)";
 
-		return (jdbcTemplate.update(sqlStatement,
-				new Object[] { userid, password, name, birth, gender, stamp, fashion, beauty, general, sports, health}) == 1);
+		return (jdbcTemplate.update(sqlStatement, new Object[] { userid, password, name, birth, gender, stamp, fashion,
+				beauty, general, sports, health }) == 1);
 	}
 
 	public List<Users> getUsers() {
@@ -119,15 +119,44 @@ public class UsersDAO {
 
 		});
 	}
-	
-	public boolean saveStamp(String id, int stampCnt) {
-		
-		String sqlStatement = "update users set stamp = ? where userid=?";
-		
-		System.out.println("stampCnt = " + stampCnt);
-		
-		return (jdbcTemplate.update(sqlStatement,
-				new Object[] {stampCnt, id }) == 1);
-		
+
+	public Users getUserInfo(String id) {
+
+		String sqlStatement = "select * from users where userid=?";
+		return jdbcTemplate.queryForObject(sqlStatement, new Object[] { id}, new RowMapper<Users>() {
+
+			@Override
+			public Users mapRow(ResultSet rs, int rowNum) throws SQLException {
+
+				Users user = new Users();
+
+				user.setUserid(rs.getString("userid"));
+				user.setPassword(rs.getString("password"));
+				user.setName(rs.getString("name"));
+				user.setBirth(rs.getInt("birth"));
+				user.setGender(rs.getString("gender"));
+				user.setStamp(rs.getInt("stamp"));
+				user.setFashion(rs.getInt("fashion"));
+				user.setBeauty(rs.getInt("beauty"));
+				user.setGeneral(rs.getInt("general"));
+				user.setSports(rs.getInt("sports"));
+				user.setHealth(rs.getInt("health"));
+
+				return user;
+
+			}
+
+		});
 	}
+
+	public boolean saveStamp(String id, int stampCnt) {
+
+		String sqlStatement = "update users set stamp = ? where userid=?";
+
+		System.out.println("stampCnt = " + stampCnt);
+
+		return (jdbcTemplate.update(sqlStatement, new Object[] { stampCnt, id }) == 1);
+
+	}
+
 }

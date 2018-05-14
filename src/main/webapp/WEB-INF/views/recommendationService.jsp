@@ -15,13 +15,13 @@
 			<div class="row row-0-gutter">
 				<!-- start portfolio item -->
 				<div class="col-md-6 col-0-gutter">
-					<%-- <c:if test="${!empty user }">
+					<c:if test="${!empty user }">
 						<div>
 							<h3>
 								<span style="color: #610B38;">${user.name }</span>님을위한추천상품입니다.
 							</h3>
 						</div>
-					</c:if> --%>
+					</c:if> 
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
 							<img src="/resources/images/${category}/1.jpg" alt="img02"

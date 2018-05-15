@@ -27,13 +27,6 @@ import kr.ac.hansung.service.UsersService;
 @Controller
 public class AndroidRequestRegisterAndLoginController {
 
-	/*SendToPython cm;
-	String receiveData;
-	// 두개의 함수에서 쓰임
-	String userid;
-	String password;*/
-	//Users user;
-
 	@Autowired
 	private UsersService usersService;
 
@@ -152,10 +145,14 @@ public class AndroidRequestRegisterAndLoginController {
 			result.put("general", general);
 			result.put("sports", sports);
 			result.put("health", health);
+			
+			SendToPython cm = SendToPython.getInstance();
+			String receiveData = cm.ClientRun(fashion + ", " + beauty + ", " + general + ", " + sports + ", " + health);
+			System.out.println("login : " + receiveData);
 
 			String favorite = "";
 
-			switch (sendToPython.getReceiveData()) {
+			switch (receiveData) {
 			case "0":
 				favorite = "beauty";
 				break;
@@ -173,11 +170,13 @@ public class AndroidRequestRegisterAndLoginController {
 				break;
 			}
 			result.put("favorite", favorite);
+			System.out.println("favorite = " + favorite);
 
 			
 			/*SendToPython cm = SendToPython.getInstance();
 			String receiveData = cm.ClientRun(fashion + ", " + beauty + ", " + general + ", " + sports + ", " + health);
 			System.out.println("login : " + receiveData);*/
+			
 
 			return result;
 

@@ -18,7 +18,7 @@
 					<c:if test="${!empty user }">
 						<div>
 							<h3>
-								<span style="color: #610B38;">${user.name }</span>님을위한추천상품입니다.
+								<span style="color: #DF01D7;"><strong>${user.name }</strong></span>님을위한추천상품입니다.
 							</h3>
 						</div>
 					</c:if> 

@@ -92,5 +92,16 @@ public class HomeController {
 		return "recommendationService";
 	}
 
+	@RequestMapping("/fashionPage")
+	public String fashionPage(Model model) {
+		
+		return "fashionPage";
+	}
+	
+	@RequestMapping("/beautyPage")
+	public String beautyPage(Model model) {
+		
+		return "beautyPage";
+	}
 	
 }

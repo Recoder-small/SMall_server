@@ -35,6 +35,58 @@
 	rel="stylesheet">
 <link href="<c:url value="/resources/css/main.css"/>" rel="stylesheet">
 
+
+
+<!-- Fashion Pop Up Page -->
+
+<title>Exclusivity - Free Bootstrap 4 Template</title>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Free Template by Free-Template.co" />
+<meta name="keywords"
+	content="free bootstrap 4, free bootstrap 4 template, free website templates, free html5, free template, free website template, html5, css3, mobile first, responsive" />
+<meta name="author" content="Free-Template.co" />
+
+<link href="https://fonts.googleapis.com/css?family=Raleway"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/open-iconic-bootstrap.min.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/animate.css">
+
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/owl.theme.default.min.css">
+
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/icomoon.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/style.fashion.css">
+
+<!-- Beauty Pop Up Page -->
+
+<!-- Mobile Specific Meta -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+<!-- Bootstrap  -->
+<link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- icon fonts font Awesome -->
+<link href="${pageContext.request.contextPath}/resources/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Custom Styles -->
+<link href="${pageContext.request.contextPath}/resources/css/style.beauty.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<![endif]-->
+
+
 </head>
 <body>
 	<div>
@@ -56,12 +108,52 @@
 	<script src="<c:url value="/resources/js/theme-scripts.js"/> ">
 		
 	</script>
-	
-	
-	<script src="<c:url value="/resources/vendor/jquery/jquery.haneul.js"/>">
+
+
+	<script
+		src="<c:url value="/resources/vendor/jquery/jquery.haneul.js"/>">
+		
 	</script>
 
 
+
+	<script src="<c:url value="/resources/js/popper.min.js"/> "></script>
+	<script src="<c:url value="/resources/js/jquery.easing.1.3.js"/> "></script>
+	<script src="<c:url value="/resources/js/jquery.waypoints.min.js"/> "></script>
+	<script src="<c:url value="/resources/js/owl.carousel.min.js"/> "></script>
+	<script
+		src="<c:url value="/resources/js/jquery.animateNumber.min.js"/> "></script>
+
+
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="<c:url value="/resources/js/google-map.js"/> ">
+		
+	</script>
+
+	<script src="<c:url value="/resources/js/main.js"/> ">
+		
+	</script>
+
+
+	<!-- jQuery Library -->
+	<script type="text/javascript"
+		src="<c:url value="/resources/js/jquery-2.1.0.min.js"/> "></script>
+	<!-- Modernizr js -->
+	<script type="text/javascript"
+		src="<c:url value="/resources/js/modernizr-2.8.0.min.js"/> "></script>
+	<!-- Plugins -->
+	<script type="text/javascript"
+		src="<c:url value="/resources/js/plugins.js"/>">
+		
+	</script>
+	<!-- Custom JavaScript Functions -->
+	<script type="text/javascript"
+		src="<c:url value="/resources/js/functions.js"/> "></script>
+	<!-- Custom JavaScript Functions -->
+	<script type="text/javascript"
+		src="<c:url value="/resources/js/jquery.ajaxchimp.min.js"/>">	
+	</script>
 
 </body>
 </html>

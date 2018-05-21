@@ -24,7 +24,7 @@
 
 	<!-- Page Top Section -->
 	<section id="page-top" class="section-style"
-		data-background-image="/resources/img/beautyPage/groot.gif">
+		data-background-image="/resources/img/beautyPage/bg_1.jpg">
 		
 		<div class="container">
 			<h1 class="site-title">SMall</h1>

@@ -26,7 +26,7 @@
 	<section id="page-top" class="section-style"
 		data-background-image="/resources/img/beautyPage/bg_1.jpg">
 		
-		<div class="container">
+		<div class="container" style="color:#ffffff">
 			<h1 class="site-title">SMall</h1>
 			<!-- /.site-title -->
 			<h3 class="section-name">
@@ -35,7 +35,7 @@
 			<!-- /.section-name -->
 			<h2 class="section-title">Coming Soon</h2>
 			<!-- /.Section-title  -->
-			<div id="time_countdown" class="time-count-container">
+<!-- 			<div id="time_countdown" class="time-count-container">
 
 				
 
@@ -62,6 +62,9 @@
 
 				</div>
 			</div>
+ -->
+
+<br><br><br><br><br><br>
 
 		</div>
 		</section>

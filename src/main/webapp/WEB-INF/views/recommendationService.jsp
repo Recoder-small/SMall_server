@@ -27,7 +27,7 @@
 							<img src="/resources/images/${category}/1.jpg" alt="img02"
 								class="img-responsive" />
 							<figcaption>
-								<h2>TOMMY HILFIGER</h2>
+								<h2>SMAll</h2>
 								<p>Branding, Design</p>
 								<a href="#" data-toggle="modal" data-target="#Modal-1">View
 									more</a>
@@ -43,7 +43,7 @@
 							<img src="/resources/images/${category}/2.jpg" alt="img02"
 								class="img-responsive" />
 							<figcaption>
-								<h2>SUIT</h2>
+								<h2>INFINITY</h2>
 								<p>Branding, Web Design</p>
 								<a href="#" data-toggle="modal" data-target="#Modal-2">View
 									more</a>

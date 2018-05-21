@@ -79,6 +79,7 @@ a:focus{
 }
 .container{
 	overflow:hidden;
+	color : #000000
 }
 .section-name{
 	font-weight:700;

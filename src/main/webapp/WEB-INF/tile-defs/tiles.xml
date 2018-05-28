@@ -46,6 +46,21 @@
     <put-attribute name="body" value="/WEB-INF/views/beautyPage.jsp" />
   </definition>
   
+     <definition name="healthPage" extends="base">
+    <put-attribute name="title" value="health page" />
+    <put-attribute name="body" value="/WEB-INF/views/healthPage.jsp" />
+  </definition>
+  
+     <definition name="generalPage" extends="base">
+    <put-attribute name="title" value="general page" />
+    <put-attribute name="body" value="/WEB-INF/views/generalPage.jsp" />
+  </definition>
+  
+   <definition name="sportsPage" extends="base">
+    <put-attribute name="title" value="sports page" />
+    <put-attribute name="body" value="/WEB-INF/views/sportsPage.jsp" />
+  </definition>
+  
  
   
 </tiles-definitions>

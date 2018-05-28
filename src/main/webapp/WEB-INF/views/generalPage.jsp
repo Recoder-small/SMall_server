@@ -24,16 +24,16 @@
 
 	<!-- Page Top Section -->
 	<section id="page-top" class="section-style"
-		data-background-image="/resources/img/beautyPage/bg_1.jpg">
+		data-background-image="/resources/img/generalPage/bg_1.jpg">
 		
-		<div class="container" style=color:#ffffff>
+		<div class="container">
 			<h1 class="site-title">SMall</h1>
 			<!-- /.site-title -->
-			<h3 class="section-name">
-				<span> We Are </span>
+			<h3 class="section-name" style=color:#ffffff>
+				<span> 잡화 팝업 페이지 </span>
 			</h3>
 			<!-- /.section-name -->
-			<h2 class="section-title">Coming Soon</h2>
+			<h2 class="section-title" style=color:#ffffff>INFINITY BEACON</h2>
 			<!-- /.Section-title  -->
 			<div id="time_countdown" class="time-count-container">
 

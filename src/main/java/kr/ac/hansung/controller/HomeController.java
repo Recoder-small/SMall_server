@@ -104,4 +104,25 @@ public class HomeController {
 		return "beautyPage";
 	}
 	
+	@RequestMapping("/generalPage")
+	public String generalPage(Model model) {
+		
+		return "generalPage";
+	}
+	
+	@RequestMapping("/healthPage")
+	public String healthPage(Model model) {
+		
+		return "healthPage";
+	}
+	
+
+	@RequestMapping("/sportsPage")
+	public String sportsPage(Model model) {
+		
+		return "sportsPage";
+	}
+	
+	
+	
 }

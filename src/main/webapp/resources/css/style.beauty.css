@@ -79,7 +79,11 @@ a:focus{
 }
 .container{
 	overflow:hidden;
+<<<<<<< HEAD
 	color : #000000;
+=======
+	color : #000000
+>>>>>>> branch 'master' of https://github.com/Recoder-small/SMall_server.git
 }
 .section-name{
 	font-weight:700;

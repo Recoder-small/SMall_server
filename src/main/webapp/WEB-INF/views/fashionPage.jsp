@@ -38,24 +38,7 @@
 							<span class="oi oi-thumb-up display-4 text-muted"></span>
 						</div>
 						<div class="media-body">
-							<h5 class="mt-0">Free Bootstrap 4</h5>
-							<p class="mb-5">Far far away, behind the word mountains, far
-								from the countries Vokalia and Consonantia, there live the blind
-								texts.</p>
-							<p class="mb-0">
-								<a href="#" class="btn btn-primary btn-sm">Learn More</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div
-						class="media d-block mb-4 text-center ftco-media p-md-5 p-4 ftco-animate">
-						<div class="ftco-icon mb-3">
-							<span class="oi oi-bolt display-4 text-muted"></span>
-						</div>
-						<div class="media-body">
-							<h5 class="mt-0">Fast Loading</h5>
+							<h5 class="mt-0">FASHION</h5>
 							<p class="mb-5">Far far away, behind the word mountains, far
 								from the countries Vokalia and Consonantia, there live the blind
 								texts.</p>

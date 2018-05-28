@@ -17,9 +17,9 @@
 				<div class="col-md-6 col-0-gutter">
 					<c:if test="${!empty user }">
 						<div>
-							<h3>
-								<span style="color: #DF01D7;"><strong>${user.name }</strong></span>님을위한추천상품입니다.
-							</h3>
+							<h4>
+								<span style="color: #DF01D7;"><strong>${user.name }</strong></span>님을 위한 추천상품입니다.
+							</h4>
 						</div>
 					</c:if> 
 					<div class="ot-portfolio-item">
@@ -27,7 +27,7 @@
 							<img src="/resources/images/${category}/1.jpg" alt="img02"
 								class="img-responsive" />
 							<figcaption>
-								<h2>Dean & Letter</h2>
+								<h2>SMAll</h2>
 								<p>Branding, Design</p>
 								<a href="#" data-toggle="modal" data-target="#Modal-1">View
 									more</a>
@@ -43,7 +43,7 @@
 							<img src="/resources/images/${category}/2.jpg" alt="img02"
 								class="img-responsive" />
 							<figcaption>
-								<h2>Startup Framework</h2>
+								<h2>INFINITY</h2>
 								<p>Branding, Web Design</p>
 								<a href="#" data-toggle="modal" data-target="#Modal-2">View
 									more</a>

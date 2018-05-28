@@ -23,7 +23,7 @@
 
 			<div class="row">
 				<div class="col-md-12 text-center mb-5 ftco-animate">
-					<h2 class="text-uppercase ftco-uppercase">Our Awesome Fashion</h2>
+					<h2 class="text-uppercase ftco-uppercase">Our Awesome Sports</h2>
 					<div class="row justify-content-center">
 						<div class="col-md-7">
 							<p class="lead">관심사 sports 회원을 위한 팝업페이지 입니다.</p>
@@ -37,7 +37,7 @@
 							<span class="oi oi-thumb-up display-4 text-muted"></span>
 						</div>
 						<div class="media-body">
-							<h5 class="mt-0">Free Bootstrap 4</h5>
+							<h5 class="mt-0">SPORTS NIKE</h5>
 							<p class="mb-5">Far far away, behind the word mountains, far
 								from the countries Vokalia and Consonantia, there live the blind
 								texts.</p>

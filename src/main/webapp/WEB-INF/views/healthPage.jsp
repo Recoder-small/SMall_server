@@ -24,10 +24,10 @@
 
 			<div class="row">
 				<div class="col-md-12 text-center mb-5 ftco-animate">
-					<h2 class="text-uppercase ftco-uppercase">Our Awesome Fashion</h2>
+					<h2 class="text-uppercase ftco-uppercase">HEALTH HEALTH</h2>
 					<div class="row justify-content-center">
 						<div class="col-md-7">
-							<p class="lead">관심사 fashion 회원을 위한 팝업페이지 입니다.</p>
+							<p class="lead">관심사 health 회원을 위한 팝업페이지 입니다.</p>
 						</div>
 					</div>
 				</div>

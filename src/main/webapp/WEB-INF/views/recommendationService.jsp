@@ -135,7 +135,7 @@
 				<div class="modal-content">
 
 					<div class="modal-header">
-						<h4 class="modal-title" id="Modal-label-1">Dean & Letter</h4>
+						<h4 class="modal-title" id="Modal-label-1">SMall's recommendation</h4>
 
 						<button type="button" class="close" data-dismiss="modal"
 							aria-label="Close">
@@ -165,7 +165,7 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title" id="Modal-label-2">Startup Framework</h4>
+						<h4 class="modal-title" id="Modal-label-2">SMall's recommendation</h4>
 
 						<button type="button" class="close" data-dismiss="modal"
 							aria-label="Close">
@@ -194,7 +194,7 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title" id="Modal-label-3">Lamp & Velvet</h4>
+						<h4 class="modal-title" id="Modal-label-3">SMall's recommendation</h4>
 
 						<button type="button" class="close" data-dismiss="modal"
 							aria-label="Close">
@@ -223,7 +223,7 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title" id="Modal-label-4">Smart Name</h4>
+						<h4 class="modal-title" id="Modal-label-4">SMall's recommendation</h4>
 
 						<button type="button" class="close" data-dismiss="modal"
 							aria-label="Close">
@@ -252,7 +252,7 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title" id="Modal-label-5">Fast People</h4>
+						<h4 class="modal-title" id="Modal-label-5">SMall's recommendation</h4>
 
 						<button type="button" class="close" data-dismiss="modal"
 							aria-label="Close">
@@ -282,7 +282,7 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title" id="Modal-label-6">Kites & Stars</h4>
+						<h4 class="modal-title" id="Modal-label-6">SMall's recommendation</h4>
 
 						<button type="button" class="close" data-dismiss="modal"
 							aria-label="Close">

@@ -1,7 +1,7 @@
 # SMall_server
 
 # SMall
-### Small은 블루투스 비콘을 이용하여 실내에서 사용자의 위치를 측정하고 목적지까지 길안내를 해주며 사용자의 회원정보를 이용하여 사용자에게 맞춤추천상품을 제공하는 시스템이다. 자세한건 위키를 참조바란다. syntax: [Wiki](link)
+### Small은 블루투스 비콘을 이용하여 실내에서 사용자의 위치를 측정하고 목적지까지 길안내를 해주며 사용자의 회원정보를 이용하여 사용자에게 맞춤추천상품을 제공하는 시스템이다. 자세한 사항은 위키 참조 [Wiki](https://github.com/SMall-Capstone/SMall_server/wiki/SMall#small-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8)
 
 ## 사용방법
 ### 1. 로그인 or 회원가입
